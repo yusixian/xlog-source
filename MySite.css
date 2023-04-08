@@ -53,7 +53,7 @@
     -webkit-backdrop-filter: blur(4px);
     border-radius: 0.75rem;
     padding: 2rem;
-    z-index: 1;
+    z-index: 2;
     border: 1px solid #fff;
     transition: .3s ease;
 }
@@ -61,10 +61,10 @@
 /** Navigator */
 .xlog-header>div:last-child>div:last-child {
 		padding: 0 1rem;
-    background-color: rgb(255 255 255 / 45%); 
+		background-color: rgb(255 255 255 / 45%);
 		backdrop-filter: blur(3px);
 		-webkit-backdrop-filter: blur(1.5px);
-		z-index: 10;
+		z-index: 1;
 }
 
 .xlog-header>div:last-child { 
@@ -95,6 +95,9 @@
 	}
 	.xlog-site-follow-count>button.is-text:hover, .xlog-site-follow-button>button.is-primary.rounded-lg:hover, .xlog-site-patron>button.is-text:hover {
 		background-color: #f3bac9; 
+	}
+	.xlog-site-follow-count>button>span, .xlog-site-patron>button>span {
+		color: white;
 	}
 }
 
