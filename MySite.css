@@ -147,6 +147,9 @@
 }
 
 @media (min-width: 640px) {
+	html.dark .xlog-post:hover {
+		background-color: #282627;
+	}
   .xlog-post:hover {
     transform: scale(1.02) translateY(-0.25rem);
     transition: all 0.3s ease;
