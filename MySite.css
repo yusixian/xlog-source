@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Noto%20Serif%20SC');
+
 @font-face {
   font-family: 'Candyshop';
   src: url(https://ipfs.4everland.xyz/ipfs/bafkreiaztv4ex5zlllmz5jqkrc3uouggdwfy6rrenemtdf3erlbd6bmfwm);
@@ -31,7 +33,7 @@
   --theme-color: #e19bb7;
   --header-height: 30rem;
   --banner-bg-color: transparent;
-  --font-fans: SFCompactRounded, PingFang SC, Microsoft YaHei, Lato, sans-serif;
+  --font-fans: SFCompactRounded, 'Noto Serif SC', PingFang SC, Microsoft YaHei, Lato, sans-serif;
 }
 
 /* header overall */
