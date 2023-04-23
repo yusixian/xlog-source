@@ -37,6 +37,10 @@
 }
 
 /* header overall */
+.xlog-banner {
+	background: url(https://fastly.jsdelivr.net/gh/yusixian/imgBed@latest/img/cos_blog/101772766_p0.webp);
+	background-size: cover;
+}
 
 .xlog-site-name {
   color: var(--theme-color);
@@ -50,68 +54,46 @@
 }
 
 .xlog-site-info {
-  background-color: rgb(255 255 255 / 40%);
+  background-color: rgb(255 255 255 / 60%);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 0.75rem;
   padding: 2rem;
   z-index: 2;
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   transition: 0.3s ease;
 }
-
+html.dark .xlog-site-info {
+  background-color: rgb(0 0 0 / 65%);
+	border-color: black; 
+}
 /** Navigator */
-.xlog-header > div:nth-child(2) > div:last-child {
-  padding: 0 1rem;
-  background-color: rgb(255 255 255 / 45%);
+.xlog-site-navigation-item {
+	border-radius: .75rem .75rem 0 0;
+	padding: 0 .75rem;
+  background-color: rgb(255 255 255 / 75%);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(1.5px);
-  z-index: 1;
-  width: calc(100% + 2.5rem);
+}
+button[aria-label="connector"] { 
+  background-color: rgb(255 255 255 / 75%);
 }
 
-.xlog-header > div:last-child {
-  padding-left: 0;
-  padding-right: 0;
+html.dark .xlog-site-navigation-item {
+  background-color: rgb(0 0 0 / 75%);
+}
+html.dark button[aria-label="connector"] { 
+  background-color: rgb(0 0 0 / 75%);
 }
 
 /** Button Group */
-@media (min-width: 640px) {
-  .xlog-header > div:last-child > div:nth-child(2) {
-    padding: 3rem 4rem;
-  }
-
-  .xlog-site-description,
-  .xlog-site-follow-count > button,
-  .xlog-site-patron > button > span > span {
-    color: whitesmoke;
-  }
-
-  .xlog-site-follow-count > button,
-  .xlog-site-follow-button,
-  .xlog-site-more-out svg {
+@media (min-width: 640px) { 
+	button[aria-label="follow"] {
     transition: all 0.3s ease;
-  }
-  .xlog-site-follow-count > button:hover,
-  .xlog-site-patron > button:hover,
-  .xlog-site-follow-button:hover,
-  .xlog-site-more-out:hover {
+		background-color: transparent;
+	}
+  button[aria-label="follow"]:hover {
     animation: shake 2s ease;
-  }
-  .xlog-site-follow-count > button.is-text,
-  .xlog-site-patron > button.is-text {
-    background-color: #e19bb7;
-    transition-property: all;
-    transition: 0.3s ease;
-  }
-  .xlog-site-follow-count > button.is-text:hover,
-  .xlog-site-follow-button > button.is-primary.rounded-lg:hover,
-  .xlog-site-patron > button.is-text:hover {
-    background-color: #f3bac9;
-  }
-  .xlog-site-follow-count > button > span,
-  .xlog-site-patron > button > span {
-    color: white;
   }
 }
 
@@ -135,11 +117,11 @@
 }
 
 .xlog-site-navigation-item:hover {
-  color: #e19bb7;
+  color: var(--theme-color);
 }
 
 .xlog-site-navigation-item:hover::after {
-  background-color: #e19bb7;
+  background-color: var(--theme-color);
 }
 
 /* post list */
